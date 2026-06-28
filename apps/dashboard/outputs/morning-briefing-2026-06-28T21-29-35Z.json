@@ -1,0 +1,151 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Briefing — 28 June 2026"
+      },
+      "children": [
+        "header-stack",
+        "separator-1",
+        "priorities-section",
+        "separator-2",
+        "closing-text"
+      ]
+    },
+    "header-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "date-text",
+        "location-weather-text"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "Воскресенье, 28 июня 2026",
+        "variant": "lead"
+      }
+    },
+    "location-weather-text": {
+      "type": "Text",
+      "props": {
+        "text": "Одесса: ☀️ +27°C ↓5m/s"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "priorities-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "priorities-heading",
+        "freight-item",
+        "crypto-item",
+        "growth-item"
+      ]
+    },
+    "priorities-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Приоритеты",
+        "level": "h2"
+      }
+    },
+    "freight-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "freight-badge",
+        "freight-text"
+      ]
+    },
+    "freight-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Freight"
+      }
+    },
+    "freight-text": {
+      "type": "Text",
+      "props": {
+        "text": "API-трекинг, User Stories, SeaRates"
+      }
+    },
+    "crypto-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-badge",
+        "crypto-text"
+      ]
+    },
+    "crypto-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Crypto"
+      }
+    },
+    "crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "RSI/MACD, BTC/ETH/SOL, лимитные ордера на Base"
+      }
+    },
+    "growth-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "growth-badge",
+        "growth-text"
+      ]
+    },
+    "growth-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "$100k/мес"
+      }
+    },
+    "growth-text": {
+      "type": "Text",
+      "props": {
+        "text": "рост компании, команда, Ikigai"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "closing-text": {
+      "type": "Text",
+      "props": {
+        "text": "Воскресное затишье. Пусть неделя начнётся без спешки ✦",
+        "variant": "muted"
+      }
+    }
+  }
+}

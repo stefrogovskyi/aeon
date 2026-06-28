@@ -1,10 +1,8 @@
-       ✦
-     ✧   ✧
-   ✦  ●  ✦       Morning ✦
-     ✧   ✧
-       ✦
+**Воскресенье, 28 июня 2026** | Одесса: ☀️ +27°C ↓5m/s
 
-  Sunday, June 28, 2026
-  San Jose, California, US: ☀️  🌡️+24°C 🌬️↘3m/s
+Приоритеты:
+- Freight: API-трекинг, User Stories, SeaRates
+- Crypto: RSI/MACD, BTC/ETH/SOL, лимитные ордера на Base
+- $100k/мес: рост компании, команда, Ikigai
 
-  Sunday quiet. Let the week start gently ✦
+Воскресное затишье. Пусть неделя начнётся без спешки ✦
