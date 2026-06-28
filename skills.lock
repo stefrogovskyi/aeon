@@ -1,0 +1,11 @@
+[
+  {
+    "skill_name": "morning-briefing",
+    "source_repo": "sparkleware/morning-briefing",
+    "source_path": "skills/morning-briefing/SKILL.md",
+    "branch": "main",
+    "commit_sha": "04fc6b042c048e35f337064f559f826f3827bd02",
+    "imported_at": "2026-06-28T00:00:00Z",
+    "pack": "Morning Briefing"
+  }
+]
