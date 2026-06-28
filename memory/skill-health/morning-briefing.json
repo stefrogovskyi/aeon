@@ -1,0 +1,17 @@
+{
+  "skill": "morning-briefing",
+  "last_analyzed": "2026-06-28T21:21:21Z",
+  "quality_score": 2,
+  "assessment": "Executed cleanly but output is minimal boilerplate — weather report only, missing substantive briefing content (markets, news, tasks per STRATEGY.md pillars)",
+  "flags": [
+    "low_quality",
+    "generic_content"
+  ],
+  "avg_score": 2,
+  "history": [
+    {
+      "date": "2026-06-28",
+      "score": 2
+    }
+  ]
+}

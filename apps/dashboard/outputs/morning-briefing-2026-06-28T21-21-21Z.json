@@ -1,0 +1,38 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning ✦"
+      },
+      "children": [
+        "heading_date",
+        "text_location_weather",
+        "text_closing"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "Sunday, June 28, 2026",
+        "level": "h2"
+      }
+    },
+    "text_location_weather": {
+      "type": "Text",
+      "props": {
+        "text": "San Jose, California, US: ☀️  🌡️+24°C 🌬️↘3m/s",
+        "variant": "body"
+      }
+    },
+    "text_closing": {
+      "type": "Text",
+      "props": {
+        "text": "Sunday quiet. Let the week start gently ✦",
+        "variant": "lead"
+      }
+    }
+  }
+}
