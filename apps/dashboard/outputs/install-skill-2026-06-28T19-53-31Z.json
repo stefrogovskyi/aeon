@@ -1,0 +1,120 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "morning-briefing installed"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-main",
+        "sep1",
+        "details-section",
+        "sep2",
+        "config-section"
+      ]
+    },
+    "text-main": {
+      "type": "Text",
+      "props": {
+        "text": "Installed & merged to main — from sparkleware/morning-briefing",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "details-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-count",
+        "badges-stack"
+      ]
+    },
+    "stat-count": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills installed",
+        "value": "1"
+      }
+    },
+    "badges-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-enabled",
+        "badge-schedule"
+      ]
+    },
+    "badge-enabled": {
+      "type": "Badge",
+      "props": {
+        "text": "Enabled in productivity pack",
+        "variant": "default"
+      }
+    },
+    "badge-schedule": {
+      "type": "Badge",
+      "props": {
+        "text": "Scheduled 07:00 UTC daily",
+        "variant": "default"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "config-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "config-heading",
+        "config-text1",
+        "config-text2"
+      ]
+    },
+    "config-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Configuration",
+        "level": "h3"
+      }
+    },
+    "config-text1": {
+      "type": "Text",
+      "props": {
+        "text": "No secrets needed",
+        "variant": "body"
+      }
+    },
+    "config-text2": {
+      "type": "Text",
+      "props": {
+        "text": "Set var to a city name for local weather",
+        "variant": "body"
+      }
+    }
+  }
+}

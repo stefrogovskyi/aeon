@@ -1,0 +1,1 @@
+Installed & merged morning-briefing (1 skill) to main — from sparkleware/morning-briefing. Skill lands enabled in the productivity pack, scheduled 07:00 UTC daily. No secrets needed; set var to a city name for local weather.
