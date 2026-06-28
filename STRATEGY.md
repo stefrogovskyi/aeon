@@ -1,49 +1,26 @@
 # Strategy
 
-Aeon's north-star. Every skill reads this — it's imported into `CLAUDE.md`, so it
-sits in context on **every** run. Skills should align their output to it: what to
-work on, what to prioritise, what to flag, what to skip.
+# AEON Autonomous Fleet Strategic Manifest
 
-Keep it short (it costs tokens each run): one north-star, 3–5 priorities, the
-constraints. Replace the defaults below with your own.
+## 1. Core Vision & Context
+- **Executive Owner:** Stefan Rogovskyi (Стефан Роговский).
+- **Operational Model:** Solo-Executive Agency. Every task executed by AEON sub-agents must aim at achieving 100% autonomy, recursive self-improvement, and zero infrastructure overhead on local hardware.
+- **Strategic Direction:** Combining deep automation (AI agents, low-code, MCP, OSWorld), cryptocurrency trading systems, product analysis for digital logistics platforms, and white-hat security principles to construct highly leverageable, resilient, and anti-fragile digital assets requiring minimal human overhead (1 hour/week protocol control).
 
-> **Status:** unconfigured defaults. Until you tailor this file, skills operate
-> with general best judgment and no specific bias. Remove this line once it's yours.
+## 2. Key Pillars of Operational Focus
+All activated skills must align with and feed data into these specific areas:
 
-## North-star metric
+### Pillar A: Deep Product Analysis & Freight Automation
+- **Target Context:** Digital Freight Forwarding, Supply Chain IT, Container Shipping (e.g., tools like SeaRates.com).
+- **Core Task:** Continuously monitor market trends, forums, social media, and developer friction regarding API tracking, ship schedules, and logistics calculations. Filter noise, build comprehensive User Stories, and structure automated feature backlogs.
 
-The single outcome everything should move toward.
-*e.g. "weekly active users of my app", "MRR", "reach of my research".*
+### Pillar B: Algorithmic Crypto-Trading Research
+- **Target Context:** Defi & CeFi markets (BTC, ETH, SOL, altcoins) across Base network, Tier-1 exchanges, and specialized data feeds.
+- **Core Task:** Daily market scanning, quantitative indicator processing (RSI, MACD, Moving Averages), and pattern identification. Generate precise limit order signals for spot/swing trading and send alerts directly via Telegram/Email.
 
-**Default:** sustainable, compounding progress on the operator's active projects.
+### Pillar C: Cyber Security & Local Integrity
+- **Core Task:** Integration of white-hat hacking methodologies, testing security/DLP-bypass mechanisms for resilient communication, and orchestrating secure, decentralized computing resources (Vultr, Replit environments, decentralized computing providers).
 
-## Priorities
-
-The few things that matter most right now, most important first.
-
-1. Correct, verifiable work over work that merely looks finished.
-2. Depth on the operator's core projects over broad, shallow coverage.
-3. Surface signal early — don't sit on something that needs a decision.
-
-*Replace with your own; cap at ~5.*
-
-## Audience
-
-Who the output is for, and their level.
-*e.g. "technical founders on X", "my internal team", "just me".*
-
-**Default:** the operator — assume technical and time-constrained.
-
-## Hard constraints
-
-Lines never to cross.
-
-- Never publish secrets, private data, or unverified claims as fact.
-- Stay within any configured spend and rate limits.
-
-*Add your own — budget caps, tone, topics to avoid, compliance limits.*
-
-## Optimize for / avoid
-
-- **Optimize for:** signal, correctness, and the priorities above.
-- **Avoid:** filler, hype, busywork, anything off-strategy.
+## 3. The North-Star Metric
+- **LTV / Efficiency Ratio:** Maximum automated product value generated and system errors self-healed (`skill-repair`) relative to total token API expenses.
+- **Constraints:** Zero dependencies on external human employees for routine workflows. System-level scaling through the replication of isolated sub-agents (`spawn-instance`).
