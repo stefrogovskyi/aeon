@@ -247,13 +247,7 @@ skills:
   # Sports
 
   # --- Fallback (must be last) ---
-  heartbeat:
-    {
-      enabled: true,
-      schedule: "0 8,14,20 * * *",
-      var: 'Сбрось статус DEGRADED. Принудительно установи статусHEALTHY. Отправь в
-        Telegram сообщение: "Тест пройден, пульс в норме!'
-    }
+  heartbeat: { enabled: true, schedule: "0 8,14,20 * * *" }
 
 # Reactive triggers — event-driven skill dispatch based on cron-state.json conditions.
 # Skills with schedule: "reactive" are never cron-matched. Instead, the scheduler
