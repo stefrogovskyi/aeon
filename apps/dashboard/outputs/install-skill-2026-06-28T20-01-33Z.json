@@ -1,0 +1,126 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "install-skill"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-section",
+        "separator-1",
+        "config-section"
+      ]
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-status",
+        "text-skill-name",
+        "text-count",
+        "text-source",
+        "text-pr-status"
+      ]
+    },
+    "heading-status": {
+      "type": "Heading",
+      "props": {
+        "text": "Installation Complete",
+        "level": "h2"
+      }
+    },
+    "text-skill-name": {
+      "type": "Text",
+      "props": {
+        "text": "Skill: morning-briefing",
+        "variant": "lead"
+      }
+    },
+    "text-count": {
+      "type": "Text",
+      "props": {
+        "text": "Count: 1 skill"
+      }
+    },
+    "text-source": {
+      "type": "Text",
+      "props": {
+        "text": "Source: sparkleware/morning-briefing"
+      }
+    },
+    "text-pr-status": {
+      "type": "Text",
+      "props": {
+        "text": "Status: Already live on main via PR #1"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "config-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-config",
+        "badge-enabled",
+        "text-schedule",
+        "text-secrets",
+        "text-weather"
+      ]
+    },
+    "heading-config": {
+      "type": "Heading",
+      "props": {
+        "text": "Configuration",
+        "level": "h3"
+      }
+    },
+    "badge-enabled": {
+      "type": "Badge",
+      "props": {
+        "text": "enabled: true",
+        "variant": "default"
+      }
+    },
+    "text-schedule": {
+      "type": "Text",
+      "props": {
+        "text": "Schedule: 0 7 * * * (daily at 7 AM)"
+      }
+    },
+    "text-secrets": {
+      "type": "Text",
+      "props": {
+        "text": "Secrets: No secrets required"
+      }
+    },
+    "text-weather": {
+      "type": "Text",
+      "props": {
+        "text": "wttr.in provides weather data keylessly",
+        "variant": "muted"
+      }
+    }
+  }
+}
