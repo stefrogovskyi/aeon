@@ -1,0 +1,172 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health Alert"
+      },
+      "children": [
+        "alert-main",
+        "sep1",
+        "skills-section",
+        "sep2",
+        "diagnostics-section"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 FAILED",
+        "message": "heartbeat and autoresearch skills showing consecutive failures with 0 tokens used, suggesting execution halts before reaching the API",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "skills-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skills-heading",
+        "skills-table"
+      ]
+    },
+    "skills-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Failed Skills",
+        "level": "h3"
+      }
+    },
+    "skills-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Status",
+          "Details"
+        ],
+        "rows": [
+          [
+            "heartbeat",
+            "Failed",
+            "3 consecutive failures, never succeeded — agent health monitoring is unreliable"
+          ],
+          [
+            "autoresearch",
+            "Failed",
+            "Failed 2026-06-28 18:09 UTC, 0/1 runs, 0 tokens used"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "diagnostics-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "diag-heading",
+        "root-cause",
+        "remedy-heading",
+        "remedy-items"
+      ]
+    },
+    "diag-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Diagnostics",
+        "level": "h3"
+      }
+    },
+    "root-cause": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rc-label",
+        "rc-text",
+        "rc-checks"
+      ]
+    },
+    "rc-label": {
+      "type": "Text",
+      "props": {
+        "text": "Root Cause (Hypothesis):",
+        "variant": "lead"
+      }
+    },
+    "rc-text": {
+      "type": "Text",
+      "props": {
+        "text": "Both skills show 0 tokens used on every run — likely a gateway auth or sandbox crash before execution",
+        "variant": "body"
+      }
+    },
+    "rc-checks": {
+      "type": "Text",
+      "props": {
+        "text": "0 tokens used = execution halts before reaching the Claude API",
+        "variant": "muted"
+      }
+    },
+    "remedy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Remediation",
+        "level": "h4"
+      }
+    },
+    "remedy-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "remedy1",
+        "remedy2",
+        "remedy3"
+      ]
+    },
+    "remedy1": {
+      "type": "Text",
+      "props": {
+        "text": "Check ANTHROPIC_API_KEY secret is configured",
+        "variant": "body"
+      }
+    },
+    "remedy2": {
+      "type": "Text",
+      "props": {
+        "text": "Check CLAUDE_CODE_OAUTH_TOKEN secret is configured",
+        "variant": "body"
+      }
+    },
+    "remedy3": {
+      "type": "Text",
+      "props": {
+        "text": "Check gateway config in aeon.yml",
+        "variant": "body"
+      }
+    }
+  }
+}
