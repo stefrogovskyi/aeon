@@ -1,0 +1,16 @@
+{
+  "skill": "autoresearch",
+  "last_analyzed": "2026-06-28T19:32:25Z",
+  "quality_score": 1,
+  "assessment": "autoresearch failed due to missing required 'var' parameter—no skill evolution performed",
+  "flags": [
+    "empty_output"
+  ],
+  "avg_score": 1,
+  "history": [
+    {
+      "date": "2026-06-28",
+      "score": 1
+    }
+  ]
+}
