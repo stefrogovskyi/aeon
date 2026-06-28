@@ -1,3 +1,8 @@
-🔴 FAILED: heartbeat (3 consecutive failures, never succeeded — agent health monitoring is unreliable), autoresearch (failed 2026-06-28 18:09 UTC, 0/1 runs)
+HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
-Both skills show 0 tokens used on every run — likely a gateway auth or sandbox crash before execution. Check ANTHROPIC_API_KEY / CLAUDE_CODE_OAUTH_TOKEN secrets and the gateway config in aeon.yml.
+**Summary:**
+
+- **P0**: `autoresearch` still `failed` (0/1 runs) — already notified in the 18:27 UTC run today, deduped, no new notification sent. `heartbeat` recovered: `success`, consecutive_failures cleared to 0.
+- **P1–P3**: No open PRs, issues disabled, no new flags.
+- **Status page** (`docs/status.md`) regenerated: 🔴 DEGRADED (autoresearch still failing), heartbeat now showing ✅ success at 25% success rate.
+- **Next scheduled run**: heartbeat at 20:00 UTC.
