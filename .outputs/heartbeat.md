@@ -1,8 +1,20 @@
 HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
-**Summary:**
+---
 
-- **P0**: `autoresearch` still `failed` (0/1 runs) — already notified in the 18:27 UTC run today, deduped, no new notification sent. `heartbeat` recovered: `success`, consecutive_failures cleared to 0.
-- **P1–P3**: No open PRs, issues disabled, no new flags.
-- **Status page** (`docs/status.md`) regenerated: 🔴 DEGRADED (autoresearch still failing), heartbeat now showing ✅ success at 25% success rate.
-- **Next scheduled run**: heartbeat at 20:00 UTC.
+## Summary
+
+**Checks run (2026-06-28 ~20:10 UTC):**
+
+- **P0:** Two conditions found, both deduped from earlier today:
+  - `autoresearch` still failed (reported at 18:27 UTC, deduped)
+  - `heartbeat` now crosses the chronic-failure threshold (success_rate=0.4, 5 runs — new threshold trigger, but underlying issue already logged, deduped)
+- **P1:** No open PRs; issues disabled on repo
+- **P2:** No flagged memory items
+- **P3:** Only enabled skill is `heartbeat`; last success well within 2× schedule interval
+
+**Files updated:**
+- `docs/status.md` — regenerated (Overall: 🔴 DEGRADED, updated timestamp, corrected heartbeat success rate to 40%)
+- `memory/logs/2026-06-28.md` — appended 20:10 UTC run entry
+
+**No notification sent** — all P0 findings were deduped against logs from the same day.
