@@ -1,0 +1,23 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_success"
+      ]
+    },
+    "alert_success": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "message": "Тест пройден, пульс в норме!"
+      },
+      "children": []
+    }
+  }
+}
