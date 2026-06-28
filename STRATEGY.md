@@ -18,8 +18,9 @@ All activated skills must align with and feed data into these specific areas:
 - **Target Context:** Defi & CeFi markets (BTC, ETH, SOL, altcoins) across Base network, Tier-1 exchanges, and specialized data feeds.
 - **Core Task:** Daily market scanning, quantitative indicator processing (RSI, MACD, Moving Averages), and pattern identification. Generate precise limit order signals for spot/swing trading and send alerts directly via Telegram/Email.
 
-### Pillar C: Cyber Security & Local Integrity
-- **Core Task:** Integration of white-hat hacking methodologies, testing security/DLP-bypass mechanisms for resilient communication, and orchestrating secure, decentralized computing resources (Vultr, Replit environments, decentralized computing providers).
+### Pillar C: Enterpreneurship & Local Integrity
+- **Target Context:** Reach full Ikigai concept and balance in critical situations in every moment of time, face and conquer challenges, win in crisises. 
+- **Core Task:** Strive towards growing Stefan's group of companies to earn $100k per month net profit, manage team of people in Biblical values and create opportunities for everyone to grow personally, professionally and financially, and to satisfy customers. 
 
 ## 3. The North-Star Metric
 - **LTV / Efficiency Ratio:** Maximum automated product value generated and system errors self-healed (`skill-repair`) relative to total token API expenses.
