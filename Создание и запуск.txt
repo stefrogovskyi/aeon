@@ -1,0 +1,12 @@
+Локальный запуск
+https://gemini.google.com/app/d6b890cfa3ca5ff8
+
+1. Открыть гит баш в папке проекта
+2. ввести команду старта ./aeon
+3. перейти на http://localhost:5555/
+
+
+
+Запуск на реплите
+https://gemini.google.com/app/76545b337dfae098
+

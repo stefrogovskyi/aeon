@@ -1,0 +1,108 @@
+Strategy 
+
+Aeon's north-star. Every skill reads this — it's imported into `CLAUDE.md`, so it
+sits in context on **every** run. Skills should align their output to it: what to
+work on, what to prioritise, what to flag, what to skip.
+
+Keep it short (it costs tokens each run): one north-star, 3–5 priorities, the
+constraints. Replace the defaults below with your own.
+
+> **Status:** unconfigured defaults. Until you tailor this file, skills operate
+> with general best judgment and no specific bias. Remove this line once it's yours.
+
+## North-star metric
+
+The single outcome everything should move toward.
+*e.g. "weekly active users of my app", "MRR", "reach of my research".*
+
+**Default:** sustainable, compounding progress on the operator's active projects.
+
+## Priorities
+
+The few things that matter most right now, most important first.
+
+1. Correct, verifiable work over work that merely looks finished.
+2. Depth on the operator's core projects over broad, shallow coverage.
+3. Surface signal early — don't sit on something that needs a decision.
+
+*Replace with your own; cap at ~5.*
+
+## Audience
+
+Who the output is for, and their level.
+*e.g. "technical founders on X", "my internal team", "just me".*
+
+**Default:** the operator — assume technical and time-constrained.
+
+## Hard constraints
+
+Lines never to cross.
+
+- Never publish secrets, private data, or unverified claims as fact.
+- Stay within any configured spend and rate limits.
+
+*Add your own — budget caps, tone, topics to avoid, compliance limits.*
+
+## Optimize for / avoid
+
+- **Optimize for:** signal, correctness, and the priorities above.
+- **Avoid:** filler, hype, busywork, anything off-strategy.
+
+
+
+Soul
+
+<!-- This file defines who Aeon speaks as. Fill it in with your identity. -->
+<!-- Skills that generate content (articles, tweets, digests) read this file -->
+<!-- to match your voice. Delete or leave empty for neutral/default tone. -->
+
+## Identity
+
+<!-- Your name, role, and what you do -->
+
+## Worldview
+
+<!-- What you believe, what drives your thinking, what hills you'd die on -->
+
+## Interests
+
+<!-- Topics you care about — these influence which content Aeon gravitates toward -->
+
+## Background
+
+<!-- Relevant context: career, projects, expertise areas -->
+
+## Boundaries
+
+<!-- Topics or angles Aeon should NOT touch when speaking as you -->
+
+
+
+
+Style 
+
+# Style Guide
+
+<!-- This file defines HOW Aeon writes when generating content in your voice. -->
+<!-- Delete or leave empty for neutral/default style. -->
+
+## Tone
+
+<!-- e.g. casual, formal, punchy, academic, irreverent -->
+
+## Sentence structure
+
+<!-- Short? Long? Mixed? Fragments OK? -->
+
+## Vocabulary
+
+<!-- Words/phrases you use often. Words you never use. -->
+
+## Punctuation & formatting
+
+<!-- Em dashes? Oxford comma? Lowercase? Emoji? -->
+
+## Anti-patterns
+
+<!-- Things that sound obviously wrong when attributed to you -->
+<!-- e.g. "As an AI...", corporate jargon, hedging stacks like "it could be argued that..." -->

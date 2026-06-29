@@ -1,0 +1,13 @@
+@echo off
+echo [INFO] Killing any ghost Node.js processes...
+taskkill /F /IM node.exe >nul 2>&1
+
+echo [INFO] Entering dashboard folder...
+cd /d "%~dp0apps\dashboard"
+
+echo [INFO] Cleaning compilation cache to keep it fast...
+if exist .next rmdir /s /q .next
+
+echo [INFO] Starting Aeon Dashboard...
+start "" "http://localhost:3000"
+npm run dev
