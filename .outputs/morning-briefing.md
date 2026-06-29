@@ -1,8 +1,10 @@
-**Воскресенье, 28 июня 2026** | Одесса: ☀️ +27°C ↓5m/s
+       ✦
+     ✧   ✧
+   ✦  ●  ✦       Morning ✦
+     ✧   ✧
+       ✦
 
-Приоритеты:
-- Freight: API-трекинг, User Stories, SeaRates
-- Crypto: RSI/MACD, BTC/ETH/SOL, лимитные ордера на Base
-- $100k/мес: рост компании, команда, Ikigai
+  Monday, June 29, 2026
+  Chicago, Illinois, US: 🌤️  🌡️+26°C 🌬️↖4m/s
 
-Воскресное затишье. Пусть неделя начнётся без спешки ✦
+  A fresh week. One small thing at a time ✦

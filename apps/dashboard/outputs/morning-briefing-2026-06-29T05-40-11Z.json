@@ -1,0 +1,87 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Briefing"
+      },
+      "children": [
+        "ascii_art",
+        "separator1",
+        "date_heading",
+        "location_text",
+        "weather_stack",
+        "separator2",
+        "motivation"
+      ]
+    },
+    "ascii_art": {
+      "type": "Text",
+      "props": {
+        "text": "       ✦\n     ✧   ✧\n   ✦  ●  ✦       Morning ✦\n     ✧   ✧\n       ✦",
+        "variant": "caption"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "date_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Monday, June 29, 2026",
+        "level": "h3"
+      }
+    },
+    "location_text": {
+      "type": "Text",
+      "props": {
+        "text": "Chicago, Illinois, US"
+      }
+    },
+    "weather_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "weather_emoji",
+        "temperature_stat",
+        "wind_text"
+      ]
+    },
+    "weather_emoji": {
+      "type": "Text",
+      "props": {
+        "text": "🌤️"
+      }
+    },
+    "temperature_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "🌡️ Temperature",
+        "value": "26°C"
+      }
+    },
+    "wind_text": {
+      "type": "Text",
+      "props": {
+        "text": "🌬️ ↖4m/s"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "motivation": {
+      "type": "Text",
+      "props": {
+        "text": "A fresh week. One small thing at a time ✦",
+        "variant": "lead"
+      }
+    }
+  }
+}
