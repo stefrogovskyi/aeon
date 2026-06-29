@@ -252,7 +252,8 @@ skills:
       schedule: "0 4 * * *",
       var: "Город - Одесса. Присылай на русском в Telegram краткое вдохновляющее
         сообщение, текущую дату, день недели и напоминание главных целях из
-        файла STRATEGY.md"
+        файла STRATEGY.md",
+      model: claude-haiku-4-5-20251001
     }
 
   # --- Fallback (must be last) ---
