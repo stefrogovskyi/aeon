@@ -188,10 +188,10 @@ case "${GATEWAY:-direct}" in
     export ANTHROPIC_BASE_URL="https://openrouter.ai/api"   # NOT /api/v1
     export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"       # Bearer; API_KEY must be blank
     unset ANTHROPIC_API_KEY CLAUDE_CODE_OAUTH_TOKEN
-    # Map EVERY model slot Claude Code uses to OpenRouter slugs (opus/sonnet/haiku).
-    export ANTHROPIC_DEFAULT_OPUS_MODEL="${OPENROUTER_MODEL:-anthropic/claude-opus-4.8}"
-    export ANTHROPIC_DEFAULT_SONNET_MODEL="${OPENROUTER_MODEL_SONNET:-anthropic/claude-sonnet-5}"
-    export ANTHROPIC_DEFAULT_HAIKU_MODEL="${OPENROUTER_MODEL_HAIKU:-anthropic/claude-haiku-4.5}"
+    # Map EVERY model slot Claude Code uses to free/accessible OpenRouter slugs
+    export ANTHROPIC_DEFAULT_OPUS_MODEL="${OPENROUTER_MODEL:-stealth/ox-alpha}"
+    export ANTHROPIC_DEFAULT_SONNET_MODEL="${OPENROUTER_MODEL_SONNET:-stealth/ox-alpha}"
+    export ANTHROPIC_DEFAULT_HAIKU_MODEL="${OPENROUTER_MODEL_HAIKU:-stealth/ox-alpha}"
     MODEL="$ANTHROPIC_DEFAULT_OPUS_MODEL"
     # App attribution: HTTP-Referer + X-Title make aeon's OpenRouter traffic show
     # up on openrouter.ai's public app leaderboard. Claude Code forwards
