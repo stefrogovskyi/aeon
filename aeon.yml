@@ -237,8 +237,9 @@ harness: claude
 # For Anthropic-compatible endpoints (direct), set repo variable ANTHROPIC_BASE_URL
 # + secret ANTHROPIC_API_KEY. Example: https://api.deepseek.com/anthropic
 # Bankr docs: https://docs.bankr.bot/llm-gateway/overview
+# AI Gateway
 gateway:
-  provider: auto
+  provider: openrouter
 
 # Output channels
 channels:
