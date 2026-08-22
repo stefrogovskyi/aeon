@@ -6,8 +6,8 @@ permalink: /status/
 
 # Agent Status
 
-**Overall:** 🟢 OK — 🌱 warming up — 1 skill(s) dispatched, awaiting first completed run
-**Updated:** 2026-08-21 22:00 UTC
+**Overall:** 🟢 OK
+**Updated:** 2026-08-22 06:44 UTC
 **Open issues:** 0
 **Next scheduled run:** heartbeat at 08:00 UTC
 
@@ -21,7 +21,7 @@ Regressions also surface as **votable** per-skill GitHub Issues (`health: <skill
 
 | Skill | Last run | Status | Success rate | Consecutive failures |
 |-------|----------|--------|-------------:|---------------------:|
-| heartbeat | 2026-07-02 21:23 UTC | ⏳ dispatched | — | 0 |
+| heartbeat | 2026-08-21 22:01 UTC | ✅ success | 100% | 0 |
 
 ## Open issues
 
