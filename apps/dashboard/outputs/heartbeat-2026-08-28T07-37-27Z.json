@@ -1,0 +1,219 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Self-Check",
+        "description": "3× consecutive failures"
+      },
+      "children": [
+        "alert",
+        "sep1",
+        "status-heading",
+        "status-stack",
+        "sep2",
+        "metrics-heading",
+        "metrics-grid",
+        "sep3",
+        "crash-heading",
+        "crash-text",
+        "sep4",
+        "context-heading",
+        "context-text",
+        "sep5",
+        "issues-heading",
+        "issues-stack"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🚨 Heartbeat Degraded",
+        "message": "3 consecutive failures blocking fleet's only active skill from completing runs"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h3"
+      }
+    },
+    "status-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-degraded",
+        "last-failure",
+        "last-success",
+        "time-without-success",
+        "threshold"
+      ]
+    },
+    "badge-degraded": {
+      "type": "Badge",
+      "props": {
+        "text": "🔴 DEGRADED: heartbeat",
+        "variant": "destructive"
+      }
+    },
+    "last-failure": {
+      "type": "Text",
+      "props": {
+        "text": "Last failure: 2026-08-28 06:50 UTC",
+        "variant": "body"
+      }
+    },
+    "last-success": {
+      "type": "Text",
+      "props": {
+        "text": "Last success: 2026-08-26 09:00 UTC",
+        "variant": "body"
+      }
+    },
+    "time-without-success": {
+      "type": "Text",
+      "props": {
+        "text": "No success in: ~46.6 hours",
+        "variant": "lead"
+      }
+    },
+    "threshold": {
+      "type": "Text",
+      "props": {
+        "text": "Self-check threshold: 36 hours",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics",
+        "level": "h3"
+      }
+    },
+    "metrics-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-success-rate",
+        "stat-consecutive-failures"
+      ]
+    },
+    "stat-success-rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate (total runs)",
+        "value": "60%",
+        "delta": "6 of 10 successful"
+      }
+    },
+    "stat-consecutive-failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Failures",
+        "value": "3",
+        "trend": "down"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "crash-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Recurring Crash Signature",
+        "level": "h3"
+      }
+    },
+    "crash-text": {
+      "type": "Text",
+      "props": {
+        "text": "claude exited 1 on a truncated modelUsage JSON parse",
+        "variant": "lead"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "context-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Historical Context & Impact",
+        "level": "h3"
+      }
+    },
+    "context-text": {
+      "type": "Text",
+      "props": {
+        "text": "Same class of harness artifact flagged as isolated transient blip on 2026-08-25, but now recurring 3× back-to-back and blocking the fleet's only active skill from completing its runs",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue & PR Status",
+        "level": "h3"
+      }
+    },
+    "issues-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-no-prs",
+        "badge-clean-issues"
+      ]
+    },
+    "badge-no-prs": {
+      "type": "Badge",
+      "props": {
+        "text": "No open PRs",
+        "variant": "outline"
+      }
+    },
+    "badge-clean-issues": {
+      "type": "Badge",
+      "props": {
+        "text": "No flagged P1/P2 issues",
+        "variant": "outline"
+      }
+    }
+  }
+}

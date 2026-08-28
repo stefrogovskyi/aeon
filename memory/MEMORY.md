@@ -25,3 +25,4 @@
 - ~~Configure notification channels~~ — done: Telegram live (2026-08-21, interactive replies working)
 - Run first digest — `digest` skill installed but still disabled in aeon.yml; operator hasn't picked a topic/cadence yet
 - Pick which skills to enable (digest, article, token-movers…) — fleet is otherwise idle between daily heartbeats
+- **Investigate heartbeat crash loop** (flagged 2026-08-28): 3 consecutive `claude exited 1` failures (truncated modelUsage JSON parse) blocked heartbeat — the fleet's only active skill — for ~2 days (no run completed 2026-08-27). Same signature seen as an isolated recovered blip on 2026-08-25/26; this time it didn't self-heal. `skill-health`/`skill-repair` are both disabled in aeon.yml, so nothing auto-remediates this — operator should either enable those or investigate the harness-level crash directly.
