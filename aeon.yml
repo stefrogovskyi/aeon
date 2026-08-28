@@ -239,7 +239,7 @@ harness: claude
 # Bankr docs: https://docs.bankr.bot/llm-gateway/overview
 # AI Gateway
 gateway:
-  provider: openrouter
+  provider: auto
 
 # Output channels
 channels:
