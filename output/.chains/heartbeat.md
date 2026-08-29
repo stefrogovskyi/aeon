@@ -1,16 +1,18 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
+The ambient fleet-health check ran clean — no findings, no notification needed. Full detail below (also the run's captured output per CLAUDE.md).
 
-The fleet is healthy. This morning's `heartbeat` crash-loop (3 consecutive `claude exited 1` failures, flagged critical at 07:35 UTC) self-recovered — cron-state now shows `last_status: success`, `last_success` 2026-08-28T07:38:35Z, `consecutive_failures: 0`, success_rate 64% (7/11). No fix was applied; it cleared on its own, same as the earlier 08-25/26 blip.
+## Heartbeat — Ambient Check (2026-08-29 09:09 UTC)
 
-- **P0:** clean — no failed/stuck/degraded/chronic entries; self-check fresh (~11.5h since last success).
-- **P1:** clean — 0 open PRs; issues disabled on `stefrogovskyi/aeon`.
-- **P2:** resolved a stale flag — struck through the "investigate crash loop" item in `memory/MEMORY.md` now that it recovered, with a residual note that `skill-health`/`skill-repair` remain disabled, so a recurrence still won't auto-remediate.
-- **P3:** clean — heartbeat is the only enabled scheduled skill and is within its interval.
+**P0 — Failed & stuck skills:** 🟢 Clean. Heartbeat's own cron-state entry: `last_status: success`, `last_success` 2026-08-28T19:12:47Z (~13.9h ago, well inside the 36h self-check window), `consecutive_failures: 0`, success_rate 67% (8/12 — above the 0.5 chronic-failure bar). The 2026-08-28 crash-loop streak (3 consecutive failures, `claude exited 1` truncated modelUsage JSON parse) remains resolved with no recurrence.
 
-No notification sent — nothing currently needs attention, and the ambient-check convention is to stay quiet on a self-healed blip.
+**P1 — Stalled PRs & urgent issues:** 🟢 Clean. 0 open PRs (`gh pr list`); issues are disabled on `stefrogovskyi/aeon`.
+
+**P2 — Flagged memory items:** 🟢 Clean. MEMORY.md's "Next Priorities" are unchanged since 08-23/08-28 (digest enablement + skill-picking decisions still parked with the operator) — already reported, deduped this run.
+
+**P3 — Missing scheduled skills:** 🟢 Clean. Only `heartbeat` is enabled/scheduled; its last success is well within the 48h (2× daily) threshold. No other enabled skills to cross-check.
+
+No notification was sent — nothing needs attention.
 
 ## Summary
-- Updated `memory/MEMORY.md` to mark the heartbeat crash-loop item resolved.
-- Regenerated `docs/status.md` — verdict flipped 🔴 DEGRADED → 🟢 OK, with a note that the failure streak recovered.
-- Appended a `### heartbeat` entry to `memory/logs/2026-08-28.md` documenting this run.
-- Follow-up (non-urgent, carried in memory): `skill-health`/`skill-repair` are still disabled, so if this crash signature recurs, nothing will auto-remediate — worth enabling if it repeats.
+- Regenerated `docs/status.md`: verdict 🟢 OK, timestamp updated to 2026-08-29 09:09 UTC, heartbeat row refreshed (2026-08-28 19:12 UTC / ⏳ dispatched in-flight override / 67% / cf=0), and dropped the now-stale 08-28 crash-loop recovery note since it's >24h resolved and no longer forward-looking signal.
+- Wrote `memory/logs/2026-08-29.md` with the `### heartbeat` findings (`mode: ambient`).
+- No follow-up actions needed — fleet is healthy; the only open operator decisions (enable digest/other skills) remain parked, unchanged from prior logs.

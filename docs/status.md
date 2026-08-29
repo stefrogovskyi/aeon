@@ -7,7 +7,7 @@ permalink: /status/
 # Agent Status
 
 **Overall:** 🟢 OK
-**Updated:** 2026-08-28 19:11 UTC
+**Updated:** 2026-08-29 09:09 UTC
 **Open issues:** 0
 **Next scheduled run:** heartbeat at 08:00 UTC
 
@@ -17,13 +17,11 @@ This page reflects the live health of Aeon's scheduled skill fleet: last-run tim
 
 Regressions also surface as **votable** per-skill GitHub Issues (`health: <skill>`) — 👍/👎 them to set repair priority. On by default; set the repo variable `HEALTH_ISSUES=0` to opt out.
 
-**Note:** the earlier 3-consecutive-failure streak (last: 2026-08-28 06:50 UTC, `claude exited 1` truncated modelUsage JSON parse) recovered on its own — a success landed at 2026-08-28 07:38 UTC and consecutive failures reset to 0.
-
 ## Skill health (last 7 days)
 
 | Skill | Last run | Status | Success rate | Consecutive failures |
 |-------|----------|--------|-------------:|---------------------:|
-| heartbeat | 2026-08-28 07:38 UTC | ⏳ dispatched | 64% | 0 |
+| heartbeat | 2026-08-28 19:12 UTC | ⏳ dispatched | 67% | 0 |
 
 _All other skills in the catalog are installed but not enabled — enable them in `aeon.yml` to see them here._
 
