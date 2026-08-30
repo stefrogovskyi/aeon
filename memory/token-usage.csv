@@ -8,3 +8,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-28,heartbeat,claude-sonnet-5,2485,12610,867262,45400
 2026-08-28,heartbeat,claude-sonnet-5,2356,9885,947593,51556
 2026-08-29,heartbeat,claude-sonnet-5,2348,5837,620824,44075
+2026-08-30,heartbeat,claude-sonnet-5,2344,5433,509884,44259
