@@ -1,18 +1,16 @@
-Fleet is healthy — no notification needed (quiet path).
+Fleet health check complete — everything green, no notification needed (quiet path).
+
+## Ambient check results (2026-08-31, 11:32 UTC)
+
+- **P0 — Skills:** cron-state clean. Heartbeat `last_status: success`, `success_rate: 71%` (10/14), `consecutive_failures: 0`, `last_success` ~23.7h ago (well under the 36h self-check threshold). The 2026-08-28 crash-loop (3 consecutive failures) remains resolved with no recurrence.
+- **P1 — PRs/issues:** 0 open PRs; issues are disabled on `stefrogovskyi/aeon`.
+- **P2 — Memory flags:** MEMORY.md "Next Priorities" unchanged since prior runs — digest-skill enablement and skill-selection are still parked with the operator (not a new action item, deduped against 08-29/08-30 logs).
+- **P3 — Scheduling:** only `heartbeat` is enabled/scheduled; well within its 48h staleness window.
+
+Regenerated `docs/status.md` — **Overall: 🟢 OK**, updated to 2026-08-31 11:32 UTC, heartbeat row refreshed (71% success, cf=0).
 
 ## Summary
-
-Ran the heartbeat skill's ambient check (default `${var}`, the daily fleet-health path):
-
-- **P0 (failures/stuck):** 🟢 clean — heartbeat `last_status: success`, `last_success` ~26.6h ago (under 36h self-check threshold), `consecutive_failures: 0`, success_rate 69% (9/13). The 2026-08-28 crash-loop streak remains resolved.
-- **P1 (stalled PRs/urgent issues):** 🟢 clean — 0 open PRs; issues disabled on the repo.
-- **P2 (flagged memory):** 🟢 clean — "Next Priorities" in MEMORY.md unchanged (digest-enablement + skill-picking decisions still parked with operator).
-- **P3 (missing scheduled skills):** 🟢 clean — heartbeat is the only enabled skill and is well within its schedule window.
-
-No findings → no notification sent (quiet path).
-
-**Files modified:**
-- `docs/status.md` — regenerated, verdict 🟢 OK, heartbeat row updated (69% success rate, cf=0)
-- `memory/logs/2026-08-30.md` — created with the heartbeat run log
-
-**Follow-up:** none new — digest-enablement and skill-picking remain parked decisions for the operator (unchanged since 2026-08-23/28).
+- Ran the ambient heartbeat check (default `${var}`); no findings surfaced, so no notification was sent per the quiet-path rule.
+- Modified: `docs/status.md` (timestamp + skill-health row refresh).
+- Created: `memory/logs/2026-08-31.md` (heartbeat log entry).
+- Follow-up (unchanged, parked with operator): pick and enable additional skills (`digest`, `article`, etc.) — fleet is otherwise idle between daily heartbeats.
