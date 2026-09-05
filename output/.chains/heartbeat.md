@@ -1,14 +1,18 @@
-Ambient heartbeat check complete — fleet is healthy, nothing needs attention, so no notification was sent (per the quiet-path rule).
-
-## Findings
-
-- **P0 🟢** — cron-state clean: heartbeat `last_status: success`, `last_success` 2026-09-03T09:43:06Z (~23.7h ago, under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 78% (14/18). No stuck/failed/degraded entries; the 08-28 crash-loop streak remains resolved with no recurrence.
-- **P1 clean** — 0 open PRs; issues disabled on stefrogovskyi/aeon.
-- **P2 clean** — MEMORY.md "Next Priorities" unchanged (digest-enablement + skill-picking still parked with operator).
-- **P3 clean** — heartbeat is the only enabled scheduled skill, well within its window.
-- Regenerated `docs/status.md` — verdict 🟢 OK.
-
-`HEARTBEAT_OK · STATUS_PAGE=OK`
+Ambient heartbeat check complete — fleet is healthy, no notification needed.
 
 ## Summary
-Ran the heartbeat ambient check (empty `${var}`). Updated `docs/status.md` (timestamp, heartbeat row) and appended today's `### heartbeat` entry to `memory/logs/2026-09-04.md`. No notification needed — fleet is healthy and quiet. No follow-up actions required.
+
+Ran the heartbeat skill's **ambient check** branch (empty `${var}`, the daily scheduled path):
+
+- **P0 (failed/stuck skills):** Clean. Heartbeat is the only enabled skill; `last_status: success`, `last_success` ~25h ago (under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 79% (15/19). The old 2026-08-28 crash-loop streak remains resolved with no recurrence.
+- **P1 (stalled PRs/urgent issues):** Clean. 0 open PRs; issues are disabled on this repo.
+- **P2 (flagged memory items):** Clean. MEMORY.md's "Next Priorities" (digest enablement, skill-picking) are unchanged and already known — not re-reported.
+- **P3 (missing scheduled skills):** Clean. Heartbeat is the only enabled skill and is well within its schedule interval.
+
+**No notification sent** — nothing needs attention today.
+
+**Files modified:**
+- `docs/status.md` — regenerated, verdict `🟢 OK`, heartbeat row updated to 2026-09-05 10:31 UTC.
+- `memory/logs/2026-09-05.md` — created with today's `### heartbeat` log entry (`mode: ambient`).
+
+**Follow-up:** none new — the operator's existing open items (enabling `digest`, picking which additional skills to turn on) remain parked as before.
