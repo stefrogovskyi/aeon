@@ -1,19 +1,18 @@
-Heartbeat ambient check complete — fleet is healthy, nothing needed attention, so no notification was sent (per the quiet-path rule).
+Fleet is healthy — no notification needed. Here's the summary of this ambient heartbeat run.
+
+## Heartbeat — Ambient check (2026-09-08 11:25 UTC)
+
+**P0 — Skill health:** 🟢 Clean. Heartbeat (the only enabled/scheduled skill) shows `last_status: success`, `last_success` ~23h ago (2026-09-07T12:27:51Z, under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 82% (18/22 runs). No stuck or degraded entries. The 2026-08-28 crash-loop streak remains resolved with no recurrence.
+
+**P1 — PRs/issues:** 🟢 Clean. 0 open PRs on `stefrogovskyi/aeon`; issues are disabled on the repo.
+
+**P2 — Flagged memory items:** 🟢 Clean (deduped). MEMORY.md's "Next Priorities" (digest-enablement, skill-picking) are unchanged and already reported in prior logs.
+
+**P3 — Missing scheduled skills:** 🟢 Clean. Only `heartbeat` is enabled/scheduled; its last success is well under the 48h (2× daily schedule) staleness threshold.
+
+**Overall verdict:** 🟢 OK — nothing needs attention, no notification sent.
 
 ## Summary
-
-**Findings:**
-- P0: `heartbeat` (the only skill with a cron-state entry) is healthy — `last_status: success`, `consecutive_failures: 0`, success_rate 81% (17/21). No stuck/failed skills.
-- P1: 0 open PRs; issues are disabled on the repo.
-- P2: MEMORY.md "Next Priorities" unchanged from prior days (digest-enablement, skill-picking still parked with operator) — already reported, deduped.
-- P3: only `heartbeat` is enabled/scheduled in `aeon.yml`; its last success is well within the 48h threshold.
-
-**Verdict:** 🟢 OK
-
-**Files modified:**
-- `docs/status.md` — regenerated with current timestamp (2026-09-07 12:27 UTC) and updated heartbeat row (81% success rate).
-- `memory/logs/2026-09-07.md` — created with the `### heartbeat` log entry (`mode: ambient`).
-
-**Follow-up:** none new — the fleet remains idle apart from the daily heartbeat; enabling `digest`/other catalog skills is still an operator decision, not re-flagged here since it was already surfaced in prior logs.
-
-HEARTBEAT_OK · STATUS_PAGE=OK
+- Regenerated `docs/status.md` (verdict 🟢 OK, heartbeat row updated to 2026-09-08 11:25 UTC / ⏳ dispatched / 82% success / 0 consecutive failures).
+- Appended a `### heartbeat` entry to `memory/logs/2026-09-08.md` (mode: ambient).
+- No follow-up actions needed — fleet is healthy and quiet.
