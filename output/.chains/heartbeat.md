@@ -1,24 +1,8 @@
-Fleet health check complete — everything is clean, so no notification was sent (per the quiet-on-no-signal convention).
-
-## Ambient check results (2026-09-11, 11:13 UTC)
-
-**P0 — Failed & stuck skills:** 🟢 Clean. `heartbeat` is the only skill with a cron-state entry (self-excluded from stuck check). `last_status: success`, `last_success` 2026-09-10T11:48:51Z (~23.4h ago, under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 84% (21/25, above the 0.5 chronic-failure bar). The 2026-08-28 crash-loop streak remains resolved with no recurrence.
-
-**P1 — Stalled PRs & urgent issues:** 🟢 Clean. 0 open PRs (`gh pr list`); GitHub Issues are disabled on `stefrogovskyi/aeon`.
-
-**P2 — Flagged memory items:** 🟢 Clean (deduped). MEMORY.md's "Next Priorities" (digest-enablement, skill-picking) are unchanged and already reported in prior logs — not re-surfaced.
-
-**P3 — Missing scheduled skills:** 🟢 Clean. Only `heartbeat` is enabled/scheduled (`aeon.yml`), and its last success is well under the 48h (2× daily) staleness threshold.
-
-**Overall verdict:** 🟢 OK — no bootstrap state (fleet has completed 25 runs); nothing warming up.
-
-`docs/status.md` regenerated: Updated timestamp bumped to 2026-09-11 11:13 UTC, heartbeat row set to `⏳ dispatched` (in-flight self-override) / 84% / consecutive-failures 0. No token-report article exists, so the Token Pulse section stays omitted.
-
-`HEARTBEAT_OK · STATUS_PAGE=OK`
+No findings today — fleet is healthy, so no notification is being sent (per the skill's quiet-path rule).
 
 ## Summary
-- Ran the heartbeat ambient check (empty `${var}`, the live scheduled path).
-- Checked P0–P3: all clean, no findings, no notification sent.
-- Modified `docs/status.md` (timestamp + heartbeat row refresh).
-- Created `memory/logs/2026-09-11.md` with the `### heartbeat` log entry.
-- Follow-up (unchanged, still parked with operator): decide on enabling `digest` and picking further skills — fleet is otherwise idle between daily heartbeats.
+- Ran the heartbeat ambient check (default `${var}`, empty): P0–P3 all clean — heartbeat's own cron-state shows `success`, `last_success` ~23.3h ago (under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 85% (22/26); no open PRs; issues disabled on the repo; no new/changed priority-flagged memory items; only heartbeat is enabled/scheduled and it's well within its interval.
+- Regenerated `docs/status.md`: overall verdict 🟢 OK, updated timestamp and heartbeat's row (2026-09-12 10:33 UTC, ⏳ dispatched in-flight, 85%, 0 consecutive failures).
+- Logged the run to `memory/logs/2026-09-12.md` under `### heartbeat`.
+- `HEARTBEAT_OK · STATUS_PAGE=OK`
+- No follow-up actions needed. (Noted but out of scope: the repo currently has `AGENTS.md` deleted and untracked `notify`/`notify-jsonrender`/`secretcurl` files in the working tree — pre-existing state, left untouched since heartbeat only writes `docs/status.md` and logs.)
