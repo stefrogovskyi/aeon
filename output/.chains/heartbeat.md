@@ -1,8 +1,17 @@
-No findings today — fleet is healthy, so no notification is being sent (per the skill's quiet-path rule).
+Fleet is healthy — no notification needed. Nothing changed since yesterday: same clean cron-state, zero open PRs, no flagged memory items, and heartbeat is the only enabled scheduled skill.
 
 ## Summary
-- Ran the heartbeat ambient check (default `${var}`, empty): P0–P3 all clean — heartbeat's own cron-state shows `success`, `last_success` ~23.3h ago (under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 85% (22/26); no open PRs; issues disabled on the repo; no new/changed priority-flagged memory items; only heartbeat is enabled/scheduled and it's well within its interval.
-- Regenerated `docs/status.md`: overall verdict 🟢 OK, updated timestamp and heartbeat's row (2026-09-12 10:33 UTC, ⏳ dispatched in-flight, 85%, 0 consecutive failures).
-- Logged the run to `memory/logs/2026-09-12.md` under `### heartbeat`.
-- `HEARTBEAT_OK · STATUS_PAGE=OK`
-- No follow-up actions needed. (Noted but out of scope: the repo currently has `AGENTS.md` deleted and untracked `notify`/`notify-jsonrender`/`secretcurl` files in the working tree — pre-existing state, left untouched since heartbeat only writes `docs/status.md` and logs.)
+
+Ran the heartbeat skill's ambient check (default `${var}` path) for 2026-09-13:
+
+- **P0** — cron-state clean: heartbeat `last_status: success`, `success_rate` 85% (23/27), `consecutive_failures: 0`, last success ~24h ago (under the 36h self-check threshold).
+- **P1** — 0 open PRs; issues disabled on the repo.
+- **P2** — no unactioned MEMORY.md flags.
+- **P3** — only heartbeat is enabled/scheduled; well within its interval.
+- **Result:** `HEARTBEAT_OK · STATUS_PAGE=OK` — no notification sent (nothing needs attention).
+
+**Files modified:**
+- `docs/status.md` — regenerated (verdict 🟢 OK, timestamp bumped to 2026-09-13 10:38 UTC).
+- `memory/logs/2026-09-13.md` — created with the `### heartbeat` log entry.
+
+No follow-up actions needed.
