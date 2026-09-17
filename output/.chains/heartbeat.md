@@ -1,22 +1,19 @@
-## Heartbeat — Ambient fleet check (2026-09-16, 11:47 UTC)
-
-**Overall status: 🟢 OK** — nothing needs attention, no notification sent.
-
-**P0 — Failed & stuck skills:** Clean. `heartbeat` is the only entry in `memory/cron-state.json` (self-excluded from the stuck check): `last_status: success`, `last_success` 2026-09-15T12:16:11Z (~23h31m ago, under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 87% (26/30 runs, well above the 0.5 chronic-failure bar). The 2026-08-28 crash-loop streak remains resolved with no recurrence.
-
-**P1 — Stalled PRs / urgent issues:** Clean. `gh pr list` returns 0 open PRs; issues are disabled on `stefrogovskyi/aeon`.
-
-**P2 — Flagged memory items:** Clean (deduped). MEMORY.md's "Next Priorities" is unchanged from prior runs — digest-enablement and skill-picking remain parked with the operator; already reported in earlier logs, not re-surfaced.
-
-**P3 — Missing scheduled skills:** Clean. `heartbeat` is the only enabled skill in `aeon.yml`, and its last success is well within the 48h (2× daily schedule) threshold.
-
-**Public status page:** Regenerated `docs/status.md` — verdict 🟢 OK, `Updated: 2026-09-16 11:47 UTC`, heartbeat row shows `⏳ dispatched` (in-flight override) at 87% success / 0 consecutive failures. No token-report files exist under `output/articles/`, so the Token Pulse section stays omitted.
-
-`HEARTBEAT_OK · STATUS_PAGE=OK`
+Fleet is healthy — no notification needed (quiet path per skill rules).
 
 ## Summary
-- Read `memory/MEMORY.md`, last 2 days of logs, `memory/cron-state.json`, `aeon.yml`, `memory/issues/INDEX.md`; checked `gh pr list` / `gh issue list`.
-- Updated `docs/status.md` (timestamp + heartbeat row for today's run).
-- Created `memory/logs/2026-09-16.md` with the `### heartbeat` entry (`mode: ambient`).
-- No notification sent (fleet is healthy, nothing new to report).
-- Follow-up: none required. `docs/status.md` will be committed by the workflow's auto-commit step.
+
+Ran the heartbeat skill's ambient check (default `${var}`, the live scheduled path):
+
+- **P0** 🟢 — heartbeat's own cron-state entry is clean: `success`, 87% success rate (27/31), 0 consecutive failures, last success ~22h ago (well under the 36h self-check threshold). No other skills are enabled, so no stuck/failed entries to flag.
+- **P1** 🟢 — 0 open PRs; issues are disabled on this repo.
+- **P2** 🟢 — MEMORY.md's "Next Priorities" unchanged from prior reports (deduped, not re-flagged).
+- **P3** 🟢 — only heartbeat is scheduled, and it's well within its interval.
+- No token-report articles exist yet, so the Token Pulse section was correctly omitted from the status page.
+
+**Files modified:**
+- `docs/status.md` — regenerated with today's verdict (🟢 OK) and updated heartbeat row.
+- `memory/logs/2026-09-17.md` — new log entry under `### heartbeat` (`mode: ambient`).
+
+No findings needed attention, so per the skill's rules no notification was sent — the fleet is healthy and quiet.
+
+**HEARTBEAT_OK · STATUS_PAGE=OK**
