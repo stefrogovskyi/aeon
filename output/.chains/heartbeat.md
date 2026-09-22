@@ -1,20 +1,15 @@
-Fleet is healthy — no notification needed per the skill's quiet-path rule.
+Fleet is healthy — no notification needed (quiet path).
 
 ## Summary
 
-Ran the heartbeat ambient check (default `${var}`, live scheduled path):
+Ran the heartbeat skill's ambient check branch (default, empty `${var}`):
+- **P0**: cron-state clean — heartbeat `success_rate: 89%` (32/36), `consecutive_failures: 0`, last success ~26h ago (under the 36h self-check threshold). No stuck/failed skills.
+- **P1**: 0 open PRs; issues disabled on the repo.
+- **P2**: MEMORY.md "Next Priorities" unchanged from prior runs (digest-enablement + skill-picking still parked with the operator) — deduped, not re-reported.
+- **P3**: only heartbeat is enabled/scheduled; well within its 48h staleness threshold.
 
-- **P0 (failed/stuck skills):** clean. Only `heartbeat` has a cron-state entry (self-excluded from stuck check); `last_status: success`, `last_success` ~23h12m ago (under 36h self-check threshold), `consecutive_failures: 0`, success_rate 89% (31/35). The 2026-08-28 crash-loop signature has not recurred.
-- **P1 (stalled PRs/urgent issues):** clean — 0 open PRs; issues disabled on this repo.
-- **P2 (flagged memory items):** MEMORY.md's "Next Priorities" (digest enablement, skill picking) unchanged — already reported previously, deduped.
-- **P3 (missing scheduled skills):** clean — heartbeat is the only enabled/scheduled skill, well within its interval.
+No findings → no notification sent. Regenerated `docs/status.md` (verdict 🟢 OK, updated timestamp/row), and logged the run to `memory/logs/2026-09-22.md` under `### heartbeat`.
 
-No findings → no `./notify` sent (quiet path).
+**HEARTBEAT_OK · STATUS_PAGE=OK**
 
-**Files modified:**
-- `docs/status.md` — regenerated (verdict 🟢 OK, updated timestamp, heartbeat row: 89% success, cf=0). No token-report articles exist yet, so Token Pulse section stays omitted.
-- `memory/logs/2026-09-21.md` — created with today's `### heartbeat` entry (`mode: ambient`).
-
-`HEARTBEAT_OK · STATUS_PAGE=OK`
-
-No follow-up actions needed; fleet remains healthy.
+Files modified: `docs/status.md`, `memory/logs/2026-09-22.md` (new). No follow-up actions needed.
