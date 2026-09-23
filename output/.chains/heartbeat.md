@@ -1,15 +1,22 @@
-Fleet is healthy — no notification needed (quiet path).
+Fleet is healthy — no notification needed (quiet path per skill rules). Here's the ambient check output:
+
+## Heartbeat — Ambient Check (2026-09-23)
+
+**Overall status:** 🟢 OK
+
+**P0 — Failed & stuck skills:** Clean. `heartbeat` is the only skill with a cron-state entry: `last_status: success`, `last_success` 2026-09-22T12:48:12Z (~23h ago, under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 89% (33/37 runs). No stuck or failed entries. The 2026-08-28 crash-loop streak remains resolved with no recurrence.
+
+**P1 — Stalled PRs & urgent issues:** Clean. 0 open PRs on `stefrogovskyi/aeon`; issues are disabled on this repo.
+
+**P2 — Flagged memory items:** Clean. MEMORY.md's "Next Priorities" (digest-enablement, skill-picking) are unchanged operator backlog items, already reported in prior logs — not re-flagged.
+
+**P3 — Missing scheduled skills:** Clean. Only `heartbeat` is enabled in `aeon.yml`; its last success is well within the 48h (2×daily) threshold. All other catalog skills remain intentionally disabled.
+
+**Status page:** Regenerated `docs/status.md` — verdict 🟢 OK, heartbeat row updated to 2026-09-23 12:09 UTC / ⏳ dispatched (in-flight override) / 89% success / 0 consecutive failures.
 
 ## Summary
-
-Ran the heartbeat skill's ambient check branch (default, empty `${var}`):
-- **P0**: cron-state clean — heartbeat `success_rate: 89%` (32/36), `consecutive_failures: 0`, last success ~26h ago (under the 36h self-check threshold). No stuck/failed skills.
-- **P1**: 0 open PRs; issues disabled on the repo.
-- **P2**: MEMORY.md "Next Priorities" unchanged from prior runs (digest-enablement + skill-picking still parked with the operator) — deduped, not re-reported.
-- **P3**: only heartbeat is enabled/scheduled; well within its 48h staleness threshold.
-
-No findings → no notification sent. Regenerated `docs/status.md` (verdict 🟢 OK, updated timestamp/row), and logged the run to `memory/logs/2026-09-22.md` under `### heartbeat`.
-
-**HEARTBEAT_OK · STATUS_PAGE=OK**
-
-Files modified: `docs/status.md`, `memory/logs/2026-09-22.md` (new). No follow-up actions needed.
+- Ran the ambient (default) branch of the `heartbeat` skill — no issues found, fleet healthy.
+- Modified: `docs/status.md` (timestamp + heartbeat row refresh).
+- Created: `memory/logs/2026-09-23.md` (heartbeat log entry, `mode: ambient`).
+- No notification sent (nothing needed attention — quiet path per skill rules).
+- Follow-up (unchanged, parked with operator): pick a topic/cadence for `digest`, and decide which other catalog skills to enable — fleet is otherwise idle between daily heartbeats.
