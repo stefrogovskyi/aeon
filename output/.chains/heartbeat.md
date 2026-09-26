@@ -1,26 +1,20 @@
-## Heartbeat — Ambient Fleet Check (2026-09-25)
+Fleet health check complete — everything is green, no notification needed.
 
-**Fleet:** 1 skill enabled (`heartbeat`, daily 08:00 UTC schedule). All other catalog skills remain installed but disabled — unchanged from prior runs, still parked with the operator.
+## Ambient Heartbeat — 2026-09-26 12:25 UTC
 
-**P0 — Cron-state health:** 🟢 Clean
-- `heartbeat`: `last_status: success`, `last_success` 2026-09-24T12:00:28Z (~24h20m ago — under the 36h self-check threshold), `consecutive_failures: 0`, success rate 90% (35/39 runs, well above the 0.5 chronic-failure bar).
-- No stuck or failed entries (heartbeat is the only cron-state entry and is self-excluded from its own stuck check).
-- The 2026-08-28 crash-loop streak remains resolved — no recurrence.
+**P0 — Failed & stuck skills:** 🟢 Clean. `heartbeat` is the only cron-state entry: `last_status: success`, `last_success` 2026-09-25T12:21:00Z (~24h04m ago, well under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 90% (36/40 runs). The 2026-08-28 crash-loop streak remains fully resolved with no recurrence.
 
-**P1 — Stalled PRs / urgent issues:** 🟢 Clean — 0 open PRs; issues are disabled on `stefrogovskyi/aeon`.
+**P1 — Stalled PRs & urgent issues:** 🟢 Clean. 0 open PRs; issues are disabled on `stefrogovskyi/aeon`.
 
-**P2 — Flagged memory items:** 🟢 Clean — MEMORY.md's "Next Priorities" (digest enablement, skill-picking) are unchanged and already reported in prior logs; not re-reported per dedup rule.
+**P2 — Flagged memory items:** 🟢 Clean. MEMORY.md "Next Priorities" unchanged since last check (digest-enablement + skill-picking still parked with the operator) — deduped against prior logs, not re-reported.
 
-**P3 — Missing scheduled skills:** 🟢 Clean — heartbeat is the only enabled scheduled skill, and its last success is well within the 48h (2× daily) threshold.
+**P3 — Missing scheduled skills:** 🟢 Clean. `heartbeat` is the only enabled scheduled skill in `aeon.yml`; its last success is well under the 48h (2× daily) staleness bar.
 
-**Verdict:** Nothing needs attention → no notification sent (quiet path).
-
-**Status page:** Regenerated `docs/status.md` — overall 🟢 OK, heartbeat row updated to 2026-09-25 12:20 UTC / ⏳ dispatched (in-flight) / 90% success / 0 consecutive failures. No token-report file exists yet, so the Token Pulse section remains omitted.
-
-`HEARTBEAT_OK · STATUS_PAGE=OK`
+**Overall verdict: 🟢 OK** — no findings, no notification sent.
 
 ## Summary
-- Ran the ambient heartbeat check (default `${var}`, empty) — fleet is healthy, no findings, no notification.
-- Updated `docs/status.md` (timestamp, heartbeat row: 90% success rate).
-- Created `memory/logs/2026-09-25.md` with the `### heartbeat` entry (mode: ambient).
-- Follow-up (unchanged, parked with operator): pick which additional skills to enable — fleet is otherwise idle between daily heartbeats; `digest` skill is installed but still disabled pending a topic/cadence decision.
+- Read `memory/MEMORY.md`, last 2 days of logs, `memory/cron-state.json`, `aeon.yml`, and `memory/issues/INDEX.md`.
+- Ran P0–P3 checks: fleet is healthy, nothing needs attention.
+- Regenerated `docs/status.md` (Updated 2026-09-26 12:25 UTC, verdict 🟢 OK, heartbeat row updated to `⏳ dispatched`/90%/cf=0).
+- Appended `mode: ambient` entry to `memory/logs/2026-09-26.md`.
+- No follow-up actions needed; next scheduled run is heartbeat at 08:00 UTC tomorrow.
