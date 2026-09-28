@@ -1,23 +1,18 @@
-Heartbeat ambient check complete — fleet is healthy, nothing needed attention, no notification sent (quiet path).
+Fleet health check complete — everything is clean.
 
-## Ambient fleet-health check — 2026-09-28 08:35 UTC
+**Ambient check (2026-09-28, 14:31 UTC run):**
+- **P0** 🟢 — `heartbeat` cron-state: `last_status: success`, last success ~5h55m ago (well under the 36h self-check threshold), 0 consecutive failures, 91% success rate (39/43, above the 0.5 chronic bar). No stuck/failed entries. The August crash-loop streak has stayed resolved with no recurrence.
+- **P1** 🟢 — 0 open PRs; issues are disabled on this repo.
+- **P2** 🟢 — MEMORY.md's "Next Priorities" are unchanged from prior reports (digest enablement + skill-picking still parked with the operator) — deduped, not re-flagged.
+- **P3** 🟢 — only `heartbeat` is enabled/scheduled, and it's well within its interval.
+- **Open issues:** 0.
 
-**Overall status:** 🟢 OK
+No findings → no notification sent (quiet path, per the skill's silence-on-healthy convention). Regenerated `docs/status.md` (verdict 🟢 OK, heartbeat row updated to 14:31 UTC / 91% / 0 consecutive failures).
 
-**P0 — Failed & stuck skills:** Clean. Only `heartbeat` has a cron-state entry (self-excluded from stuck check). `last_status: success`, `last_success` 2026-09-27T10:51:14Z (~21h44m ago, well under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 90% (38/42 runs). The prior 2026-08-28 crash-loop streak remains resolved with no recurrence.
-
-**P1 — Stalled PRs & urgent issues:** Clean. 0 open PRs (`gh pr list`). Issues are disabled on this repo (`stefrogovskyi/aeon`).
-
-**P2 — Flagged memory items:** MEMORY.md's "Next Priorities" section is unchanged since 2026-08-22 — digest enablement and skill-picking remain parked awaiting an operator decision. Already reported in prior logs; deduped, not re-surfaced.
-
-**P3 — Missing scheduled skills:** Clean. Only `heartbeat` is enabled/scheduled in `aeon.yml`; its `last_success` is well within the 48h (2×daily) threshold.
-
-**Status page:** Regenerated `docs/status.md` — verdict 🟢 OK, updated timestamp and heartbeat row to 2026-09-28 08:35 UTC (90% success rate, 0 consecutive failures).
+HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
-- Read `memory/MEMORY.md`, `memory/cron-state.json`, `aeon.yml`, `memory/issues/INDEX.md`, and the last 2 days of `memory/logs/`.
-- Ran `gh pr list` (0 open) and confirmed issues are disabled on this repo.
-- Updated `docs/status.md` (timestamp + heartbeat row refresh; verdict unchanged at 🟢 OK).
-- Wrote `memory/logs/2026-09-28.md` under `### heartbeat` with `mode: ambient`.
-- No notification sent — nothing needed attention.
-- Follow-up (unchanged, parked with operator): pick a digest topic/cadence and decide which other catalog skills to enable — fleet is otherwise idle between daily heartbeats.
+- Read `memory/MEMORY.md`, last 2 days of logs, and `memory/cron-state.json`; ran P0–P3 checks — all green.
+- Regenerated `docs/status.md` with the current timestamp and updated success rate.
+- Appended a `### heartbeat` entry to `memory/logs/2026-09-28.md` (this was a second, off-cadence run today — the scheduled cron already fired at 08:35 UTC).
+- Follow-up needed: none from this run. Standing items from MEMORY.md remain parked with the operator (pick a digest topic/cadence, decide which other skills to enable).
