@@ -1,14 +1,18 @@
-Fleet is healthy — nothing needs attention, so no notification was sent (quiet path, per the dedup rule).
+Fleet health is clean — no notification needed. Here's the ambient check output.
+
+## Heartbeat — Ambient Check (2026-10-13 15:05 UTC)
+
+**P0 — Failed & stuck skills:** 🟢 Clean. `heartbeat` is the only entry in `memory/cron-state.json` (self-excluded from stuck/self-check logic): `last_status: success`, `last_success` 2026-10-12T08:37:19Z (~30.5h ago, under the 36h self-check threshold), `consecutive_failures: 0`, success_rate 93% (54/58). The 2026-08-28 crash-loop streak remains resolved with no recurrence.
+
+**P1 — Stalled PRs & urgent issues:** 🟢 Clean. 0 open PRs on `stefrogovskyi/aeon`; issues are disabled on that repo.
+
+**P2 — Flagged memory items:** 🟢 Clean. `memory/issues/INDEX.md` has 0 open rows. MEMORY.md's "Next Priorities" (digest-enablement, picking which skills to enable) are unchanged standing items parked with the operator — already reported previously, not re-flagged.
+
+**P3 — Missing scheduled skills:** 🟢 Clean. `heartbeat` is the only enabled skill in `aeon.yml`; its last success is well within the 2x-schedule (48h) window.
+
+**Status page:** Regenerated `docs/status.md` — overall verdict 🟢 OK, heartbeat row updated to `2026-10-13 15:05 UTC / ⏳ dispatched / 93% / cf=0`. No `token-report` articles exist yet, so the Token Pulse section stays omitted.
+
+`HEARTBEAT_OK · STATUS_PAGE=OK`
 
 ## Summary
-
-Ran the heartbeat ambient check (`${var}` empty, the live scheduled path):
-
-- **P0** 🟢 clean — only `heartbeat` has a cron-state entry (self-excluded from stuck check); `last_status: success`, `consecutive_failures: 0`, success_rate 93% (53/57), last success ~18h ago (well under the 36h self-check threshold). No recurrence of the 2026-08-28 crash-loop.
-- **P1** clean — 0 open PRs; issues disabled on the repo.
-- **P2** clean — `memory/issues/INDEX.md` has 0 open rows; MEMORY.md priorities unchanged (still parked with operator).
-- **P3** clean — only heartbeat is enabled/scheduled, running on time.
-- Regenerated `docs/status.md` (verdict 🟢 OK, timestamp updated to 2026-10-12 08:36 UTC).
-- Logged the run to `memory/logs/2026-10-12.md` under `### heartbeat`.
-
-Files modified: `docs/status.md`, `memory/logs/2026-10-12.md` (new). No follow-up actions needed — fleet unchanged from yesterday.
+Ran the heartbeat ambient check (default `var`). Fleet is healthy and unchanged since 2026-10-12 — no notification sent per the quiet-path rule. Modified `docs/status.md` (timestamp + heartbeat row) and created `memory/logs/2026-10-13.md` with the findings. No follow-up actions needed; standing priorities (enabling `digest`/other skills) remain parked with the operator.

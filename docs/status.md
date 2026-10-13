@@ -7,7 +7,7 @@ permalink: /status/
 # Agent Status
 
 **Overall:** 🟢 OK
-**Updated:** 2026-10-12 08:36 UTC
+**Updated:** 2026-10-13 15:05 UTC
 **Open issues:** 0
 **Next scheduled run:** heartbeat at 08:00 UTC
 
@@ -21,7 +21,7 @@ Regressions also surface as **votable** per-skill GitHub Issues (`health: <skill
 
 | Skill | Last run | Status | Success rate | Consecutive failures |
 |-------|----------|--------|-------------:|---------------------:|
-| heartbeat | 2026-10-12 08:36 UTC | ⏳ dispatched | 93% | 0 |
+| heartbeat | 2026-10-13 15:05 UTC | ⏳ dispatched | 93% | 0 |
 
 _All other skills in the catalog are installed but not enabled — enable them in `aeon.yml` to see them here._
 
